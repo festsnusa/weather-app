@@ -4,8 +4,6 @@
   span.feels-like Feels like: {{ value.main.feels_like }}
   span.humidity Humidity: {{ value.main.humidity }}
   span.temp Temperature: {{ value.main.temp }}
-  span.temp_min Min Temperature: {{ value.main.temp_min }}
-  span.temp_max Max Temperature: {{ value.main.temp_max }}
   span.visibility {{ value.main.visibility }}
   .status(v-if="value.weather.length")
     span.current-status {{ value.weather[0].description }}

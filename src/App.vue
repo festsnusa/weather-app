@@ -1,5 +1,6 @@
 <template lang="pug">
-input(type="search" @keyup.enter="search" v-model="city" placeholder="Enter your city name...")
+//- input(type="search" @keyup.enter="search" v-model="city" placeholder="Enter your city name...")
+a-input-search(v-model:value="city" placeholder="Enter your city name..." style="width: 200px" @search="search")
 .forecast(v-if="objectLoaded")
   span {{ new Date().toLocaleString('en-US', options) }}
   span City: {{locationData.name}}
