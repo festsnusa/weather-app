@@ -1,5 +1,5 @@
-import './assets/main.scss';
 import 'ant-design-vue/dist/antd.css';
+import './assets/main.scss';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
