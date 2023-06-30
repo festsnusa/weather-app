@@ -1,13 +1,10 @@
 <template lang="pug">
-.info(:class="{ active: isActive }" :value="value")
+.info(:class="{ active: isActive, iconTransform: isActive }" :value="value")
   span.time {{ setTime }}
-  span.feels-like Feels like: {{ value.main.feels_like }}
-  span.humidity Humidity: {{ value.main.humidity }}
-  span.temp Temperature: {{ value.main.temp }}
-  span.visibility {{ value.main.visibility }}
   .status(v-if="value.weather.length")
-    span.current-status {{ value.weather[0].description }}
     img(:class="`icon__${value.weather[0].icon}`")
+  span.temp {{ value.main.temp }}&degC
+
   .wind(v-if="value.wind.length")
     span.wind-speed {{ value.wind.speed }}
 </template>
@@ -40,7 +37,23 @@ export default {
 }
 
 .active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.iconTransform {
+  .icon {
+    transform: rotate(90deg);
+  }
+}
+
+.time {
+  text-align: center;
+  font-size: 3.5rem;
 }
 
 .icon {
@@ -69,5 +82,9 @@ export default {
 
 
   }
+}
+
+.temp {
+  font-size: 2rem;
 }
 </style>
