@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       city: '',
-      appKey: 'db37d5bd89a260ab941a4874ace7032d',
+      appKey: 'YOUR API KEY',
       locationData: {},
       objectLoaded: false,
       options: {
@@ -96,8 +96,6 @@ export default {
 
       // Compare the dates
       const dateIsCurrent = currentDay === inputDay && currentMonth === inputMonth && currentYear === inputYear
-
-      console.log(dateIsCurrent)
       return dateIsCurrent
 
     },
@@ -141,8 +139,6 @@ export default {
         this.forecastDates.push()
       });
 
-      console.log(this.forecastDates);
-
     },
     search() {
 
@@ -158,7 +154,6 @@ export default {
       fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(this.city)}&units=metric&APPID=${this.appKey}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data)
           this.locationData = {
             id: data.city.id,
             name: data.city.name,
