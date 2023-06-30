@@ -3,7 +3,7 @@
 This little, tiny, cutsy project is dedicated to fetch data from <a href="https://openweathermap.org/api/" target="_blank">OpenWeather API</a>. Start fetching data by typing your city name. Enjoy!
 
 ## Live Demo
-You can view the live demo version <a href="https://frabjous-selkie-2b8e18.netlify.app" target="_blank">here</a>.
+You can view the live demo version <a href="https://frabjous-selkie-2b8e18.netlify.app/" target="_blank">here</a>.
 If you have any advices, feel free to give me some feedback.
 
 ## Recommended IDE Setup
